@@ -69,7 +69,7 @@ const Footer = () => {
                         <span className="text-gray-900 font-semibold">
                             <a href="#" className="uppercase hover:underline">Blackalpha Labs</a>
                         </span>{' '}
-                        — The Brand of{' '}
+                        — A Brand of{' '}
                         <span className="text-gray-900 font-semibold">
                             <a href="#" className="hover:underline">Jehankandy Groups</a>
                         </span>
