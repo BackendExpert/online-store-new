@@ -67,11 +67,7 @@ const Footer = () => {
                     <p className="mt-8 text-xs text-yellow-100 max-w-xs">
                         &copy; {new Date().getFullYear()} Online Store. All rights reserved. Engineered by{' '}
                         <span className="text-gray-900 font-semibold">
-                            <a href="#" className="uppercase hover:underline">Blackalpha Labs</a>
-                        </span>{' '}
-                        — A Brand of{' '}
-                        <span className="text-gray-900 font-semibold">
-                            <a href="#" className="hover:underline">Jehankandy Groups</a>
+                            <a href="https://www.blackalphalabs.com" target='_blank' className="uppercase hover:underline">Blackalpha Labs</a>
                         </span>
                     </p>
 
