@@ -20,7 +20,7 @@ const authController = {
             if (password.length < 6) {
                 return res.json({ Error: "Password must be at least 6 characters" });
             }
-            
+
             // check user is in db
             const checkuser = await User.find(
                 {
