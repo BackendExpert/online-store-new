@@ -11,6 +11,16 @@ const authController = {
                 password
             } = req.body
 
+
+            const emailPattern = /^[a-zA-Z0-9._%+-]+@pdn\.ac\.lk$/;
+            if (!emailPattern.test(email)) {
+                return res.json({ Error: "Email must end with @pdn.ac.lk" });
+            }
+
+            if (password.length < 6) {
+                return res.json({ Error: "Password must be at least 6 characters" });
+            }
+            
             // check user is in db
             const checkuser = await User.find(
                 {
@@ -21,8 +31,8 @@ const authController = {
                 }
             )
 
-            if(checkuser){
-                return res.json({ Error: "User Already Exists"})
+            if (checkuser) {
+                return res.json({ Error: "User Already Exists" })
             }
 
             // hash password
@@ -48,11 +58,11 @@ const authController = {
 
             const resultNewUserActivity = await newUserActivity.save()
 
-            if(resultNewUserActivity){
-                return res.json({ Status: "Success", Message: "User Registation Success, verfy your email now"})
+            if (resultNewUserActivity) {
+                return res.json({ Status: "Success", Message: "User Registation Success, verfy your email now" })
             }
-            else{
-                return res.json({ Error: "Internal Server Errror"})
+            else {
+                return res.json({ Error: "Internal Server Errror" })
             }
 
         }
